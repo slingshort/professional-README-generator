@@ -27,9 +27,9 @@ const questions = [
     },
     {
         type: 'list',
-        name: 'lisence',
+        name: 'license',
         message: 'Which lisence would you like to use',
-        choices: ['GNU GPLv3', 'Apache License 2.0', 'MIT license', 'THe UniLicense']
+        choices: ['GNU GPLv3', 'Apache License 2.0', 'MIT license', 'The UniLicense']
     },
     {
         type: 'input',
@@ -66,6 +66,7 @@ function init() {
 
             // TODO: Create a function to write README file
             const READMEcontent = generateMarkdown(data);
+            console.log(data.license)
 
             fs.writeFile('README.md',READMEcontent, (err) =>
                 err ? console.log(err) : console.log('success!')
